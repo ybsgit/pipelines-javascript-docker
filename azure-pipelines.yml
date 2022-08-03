@@ -9,8 +9,8 @@
 
         steps:
         - task: Docker@2
-          displayName: Build an image
           inputs:
-            repository: $(imageName)
-            command: build
+            containerRegistry: 'dockerweb'
+            repository: 'javadocker'
+            command: 'buildAndPush'
             Dockerfile: app/Dockerfile
