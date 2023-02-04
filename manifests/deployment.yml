@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ybsgitpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ybsgitpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ybsgitpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ybsgitpipelinesjavascriptdocker 
+          image: mycontainerregistry98767.azurecr.io/ybsgitpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
