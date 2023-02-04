@@ -5,7 +5,12 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'whcca927_docker'
-    repository: 'newregsitry9908'
+    repository: 'javascriptdockerapp'
     command: 'buildAndPush'
     Dockerfile: 'app/Dockerfile'
 
+- task: AzureWebAppContainer@1
+  inputs:
+    azureSubscription: 'whcca927 account connection'
+    appName: 'web-app-container009'
+    containers: 'newregsitry9908/javascriptdockerapp:latest'
