@@ -13,4 +13,4 @@ steps:
   inputs:
     azureSubscription: 'whcca927 account connection'
     appName: 'web-app-container009'
-    containers: 'newregsitry9908/javascriptdockerapp:latest'
+    containers: 'newregsitry9908.azurecr.io/javascriptdockerapp:$(Build.BuildId)'
