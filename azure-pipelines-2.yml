@@ -27,6 +27,14 @@ stages:
        vmImage: ubuntu-latest
     strategy:
      runOnce:
+       preDeploy:
+         steps:
+           - task: DownloadBuildArtifacts@1
+             inputs:
+               buildType: 'current'
+               downloadType: 'single'
+               artifactName: 'manifests'
+               downloadPath: '$(System.ArtifactsDirectory)'
        deploy: 
          steps:
           - task: KubernetesManifest@0
