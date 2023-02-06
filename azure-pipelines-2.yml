@@ -34,7 +34,7 @@ stages:
                buildType: 'current'
                downloadType: 'single'
                artifactName: 'manifests'
-               downloadPath: '$(System.ArtifactsDirectory)'
+               downloadPath: '$(System.ArtifactsDirectory)/manifests'
        deploy: 
          steps:
           - task: KubernetesManifest@0
