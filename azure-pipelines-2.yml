@@ -1,0 +1,13 @@
+
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'whcca927_docker'
+    repository: 'javarepo'
+    command: 'buildAndPush'
+    Dockerfile: 'app/Dockerfile'
