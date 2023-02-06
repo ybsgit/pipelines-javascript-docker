@@ -11,3 +11,8 @@ steps:
     repository: 'javarepo'
     command: 'buildAndPush'
     Dockerfile: 'app/Dockerfile'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+      artifactName: 'manifests'
+      path: 'manifests'
