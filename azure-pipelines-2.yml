@@ -42,6 +42,8 @@ stages:
               action: 'deploy'
               kubernetesServiceConnection: 'k8scluster-default-1675676844693'
               namespace: 'default'
-              manifests: 'manifests/deployment.yml'
+              manifests:  | 
+                $(System.ArtifactsDirectory)/manifests/deployment.yml
+                $(System.ArtifactsDirectory)/manifests/service.yml
               containers: '$(containerRegistry)/javarepo'
-              imagePullSecrets: 'imagepullsecret'
+              imagePullSecrets: 'imagepullsecret1'
