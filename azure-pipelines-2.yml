@@ -35,7 +35,7 @@ stages:
               kubernetesServiceConnection: 'k8scluster-default-1675676844693'
               namespace: 'default'
               secretType: 'dockerRegistry'
-              secretName: 'imagepullsecret'
+              secretName: 'imagepullsecret1'
               dockerRegistryEndpoint: 'whcca927_docker'
           - task: KubernetesManifest@0
             inputs:
